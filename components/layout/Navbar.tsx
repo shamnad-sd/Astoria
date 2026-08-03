@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Volume2, VolumeX, Menu, X, Calendar, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 interface NavbarProps {
   onBookClick?: () => void;
@@ -39,25 +40,21 @@ export default function Navbar({ onBookClick }: NavbarProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 transition-all duration-500">
       <div
-        className={`max-w-7xl mx-auto rounded-full transition-all duration-500 flex items-center justify-between px-6 py-3.5 ${
-          isScrolled
-            ? "glass-panel-gold bg-black/85 shadow-[0_10px_30px_rgba(0,0,0,0.8)] border-accent/30"
-            : "bg-black/30 backdrop-blur-md border border-white/10"
-        }`}
+        className={`max-w-7xl mx-auto rounded-full transition-all duration-500 flex items-center justify-between px-6 py-3.5 ${isScrolled
+          ? "glass-panel-gold bg-black/85 shadow-[0_10px_30px_rgba(0,0,0,0.8)] border-accent/30"
+          : "bg-black/30 backdrop-blur-md border border-white/10"
+          }`}
       >
         {/* Brand Logo & Name */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-full border border-accent/40 bg-surface flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-black transition-colors duration-300">
-            <Sparkles className="w-4 h-4" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-lg tracking-wider text-white group-hover:text-accent transition-colors font-medium">
-              ASTORIA
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.25em] text-muted font-mono -mt-1">
-              Convention Centre
-            </span>
-          </div>
+        <a href="#" className="flex items-center group">
+          <Image
+            src="/logo/Astoria Logo.png"
+            alt="Astoria"
+            width={160}
+            height={48}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -75,13 +72,13 @@ export default function Navbar({ onBookClick }: NavbarProps) {
 
         {/* Actions (Audio & Book CTA) */}
         <div className="hidden sm:flex items-center gap-4">
-          <button
+          {/* <button
             onClick={() => setIsMuted(!isMuted)}
             title={isMuted ? "Enable Ambient Audio" : "Mute Ambient Audio"}
             className="p-2 rounded-full border border-white/10 hover:border-accent/40 bg-white/5 text-muted hover:text-accent transition-all"
           >
             {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-accent animate-pulse" />}
-          </button>
+          </button> */}
 
           <button
             onClick={onBookClick}

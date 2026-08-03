@@ -49,7 +49,8 @@ body {
 }
 
 /* Lenis Smooth Scroll Recommended Styles */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

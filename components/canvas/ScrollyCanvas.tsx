@@ -105,7 +105,7 @@ export default function ScrollyCanvas({ onLoadProgress, onLoadComplete, children
       if (isCancelled) return;
       loadedCount++;
       const currentProgress = (loadedCount / totalFrames) * 100;
-      
+
       if (onLoadProgress) {
         onLoadProgress(currentProgress);
       }

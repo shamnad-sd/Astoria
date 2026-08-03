@@ -36,7 +36,7 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
 
   return (
     <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-6 sm:p-12 md:p-16">
-      
+
       {/* Dynamic Background Audio / Scroll Indicator Top Bar */}
       <div className="flex justify-between items-center w-full max-w-7xl mx-auto pt-16 sm:pt-20">
         <motion.div
@@ -44,7 +44,7 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
           className="flex items-center gap-3 text-xs tracking-[0.25em] text-accent uppercase font-mono bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-accent/20"
         >
           <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-          <span>Cinematic Sunrise &bull; Kannur</span>
+          {/* <span>Cinematic Sunrise &bull; Kannur</span> */}
         </motion.div>
       </div>
 
@@ -60,7 +60,7 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase mb-6 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
         >
           <Sparkles className="w-3.5 h-3.5 text-accent" />
-          <span>Kannur's Premier Landmark Destination</span>
+          {/* <span>Kannur's Premier Landmark Destination</span> */}
         </motion.div>
 
         <motion.h1
