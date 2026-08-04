@@ -102,7 +102,7 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
                 <div>
                   <div className="flex items-center gap-2 text-accent text-xs font-mono uppercase tracking-widest mb-2">
                     {/* <Sparkles className="w-4 h-4" /> */}
-                    <span>Venue Visit & Reservation Inquiry</span>
+                    <span>Reservation Inquiry</span>
                   </div>
 
                   <h3 className="font-serif text-3xl sm:text-4xl text-white mb-2">

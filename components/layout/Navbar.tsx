@@ -45,8 +45,8 @@ export default function Navbar({ onBookClick, isModalOpen }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 transition-all duration-300 ${isModalOpen
-          ? "opacity-0 pointer-events-none"
-          : "opacity-100"
+        ? "opacity-0 pointer-events-none"
+        : "opacity-100"
         }`}
     >
       <div
