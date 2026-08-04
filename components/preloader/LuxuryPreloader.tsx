@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 interface LuxuryPreloaderProps {
   progress: number;
@@ -36,7 +37,7 @@ export default function LuxuryPreloader({ progress, isLoaded, onEnter }: LuxuryP
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.06)_0%,_transparent_65%)] pointer-events-none" />
 
           {/* Top Brand Header */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -44,27 +45,28 @@ export default function LuxuryPreloader({ progress, isLoaded, onEnter }: LuxuryP
           >
             <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
             <span>Astoria Convention Centre &bull; Kannur</span>
-          </motion.div>
+          </motion.div> */}
 
           {/* Center Branding & Progress */}
           <div className="flex flex-col items-center text-center max-w-lg w-full z-10 my-auto">
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="font-serif text-4xl sm:text-6xl md:text-7xl font-light tracking-wider text-gold-gradient mb-3"
+              className="font-serif text-4xl sm:text-6xl md:text-7xl font-light tracking-wider text-gold-gradient mb-10"
             >
-              ASTORIA
-            </motion.h1>
+              <a href="#" className="flex items-center group">
+                <Image
+                  src="/logo/logo-og.png"
+                  alt="Astoria"
+                  width={140}
+                  height={48}
+                  className="h-17 w-auto object-contain"
+                  priority
+                />
+              </a>
+            </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.7 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="text-xs sm:text-sm tracking-[0.4em] uppercase text-muted font-sans mb-12"
-            >
-              Where Architecture Meets Celebration
-            </motion.p>
 
             {/* Progress Counter */}
             <div className="w-full max-w-xs space-y-4">
@@ -85,7 +87,7 @@ export default function LuxuryPreloader({ progress, isLoaded, onEnter }: LuxuryP
             </div>
 
             {/* Enter Experience Prompt when complete */}
-            {isLoaded && (
+            {/* {isLoaded && (
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -97,18 +99,18 @@ export default function LuxuryPreloader({ progress, isLoaded, onEnter }: LuxuryP
                   Enter The Experience
                 </span>
               </motion.button>
-            )}
+            )} */}
           </div>
 
           {/* Bottom Footer Note */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-[10px] tracking-[0.2em] uppercase text-muted/60 font-mono"
           >
             200 High-Definition Frames &bull; Scrollytelling
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       )}
     </AnimatePresence>

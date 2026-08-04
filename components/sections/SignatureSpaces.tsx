@@ -91,12 +91,12 @@ export default function SignatureSpaces() {
   return (
     <section id="spaces" className="py-28 sm:py-36 bg-[#090909] text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
+              {/* <Sparkles className="w-3.5 h-3.5" /> */}
               <span>World-Class Venues</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight">

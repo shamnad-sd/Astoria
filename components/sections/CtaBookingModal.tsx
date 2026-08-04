@@ -40,7 +40,7 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
         <div className="max-w-5xl mx-auto px-6 sm:px-12 relative z-10 text-center">
           <div className="glass-panel-gold rounded-3xl p-10 sm:p-16 border border-accent/40 shadow-2xl relative">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface text-accent text-xs font-mono tracking-[0.3em] uppercase mb-6">
-              <Sparkles className="w-3.5 h-3.5" />
+              {/* <Sparkles className="w-3.5 h-3.5" /> */}
               <span>Personalized Concierge</span>
             </div>
 
@@ -59,7 +59,7 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
                 className="px-8 py-4 rounded-full bg-gold-gradient text-black font-semibold text-xs tracking-[0.2em] uppercase hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Book a Venue Visit</span>
+                <span>Book Tour</span>
               </button>
 
               <button
@@ -101,7 +101,7 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
               {!submitted ? (
                 <div>
                   <div className="flex items-center gap-2 text-accent text-xs font-mono uppercase tracking-widest mb-2">
-                    <Sparkles className="w-4 h-4" />
+                    {/* <Sparkles className="w-4 h-4" /> */}
                     <span>Venue Visit & Reservation Inquiry</span>
                   </div>
 

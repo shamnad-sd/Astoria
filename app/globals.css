@@ -88,10 +88,16 @@ html.lenis body {
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #FFF5D0 0%, #D4AF37 50%, #997A15 100%);
+  background: linear-gradient(135deg, #E8E0D5 0%, #B7A99A 50%, #7D7062 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* .text-gold-gradient {
+  background: linear-gradient(135deg, #FFF5D0 0%, #D4AF37 50%, #997A15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
 
 .text-silver-gradient {
   background: linear-gradient(135deg, #FFFFFF 0%, #E0E0E0 50%, #888888 100%);

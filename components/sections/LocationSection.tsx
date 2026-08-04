@@ -31,14 +31,14 @@ export default function LocationSection() {
   return (
     <section id="location" className="py-28 sm:py-36 bg-[#090909] text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: Connectivity Details */}
           <div className="lg:col-span-6 space-y-8">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase mb-4">
-                <Sparkles className="w-3.5 h-3.5" />
+                {/* <Sparkles className="w-3.5 h-3.5" /> */}
                 <span>Kannur Location</span>
               </div>
               <h2 className="font-serif text-4xl sm:text-6xl font-light tracking-tight leading-tight">

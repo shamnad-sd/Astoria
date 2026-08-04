@@ -69,12 +69,12 @@ export default function GallerySection() {
   return (
     <section id="gallery" className="py-28 sm:py-36 bg-[#090909] text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
+              {/* <Sparkles className="w-3.5 h-3.5" /> */}
               <span>Visual Journey</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-light tracking-tight leading-tight">
@@ -88,11 +88,10 @@ export default function GallerySection() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all duration-300 ${
-                  activeCategory === cat
+                className={`px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all duration-300 ${activeCategory === cat
                     ? "bg-gold-gradient text-black font-semibold"
                     : "glass-panel text-muted hover:text-white border border-white/10"
-                }`}
+                  }`}
               >
                 {cat}
               </button>

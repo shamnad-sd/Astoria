@@ -13,7 +13,7 @@ export default function ExperienceAstoria() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column - Heading & Ethos */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -23,7 +23,7 @@ export default function ExperienceAstoria() {
             className="lg:col-span-7 space-y-6"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase">
-              <Sparkles className="w-3.5 h-3.5" />
+              {/* <Sparkles className="w-3.5 h-3.5" /> */}
               <span>Architectural Ethos</span>
             </div>
 

@@ -41,11 +41,11 @@ export default function FaqSection() {
   return (
     <section id="faq" className="py-28 sm:py-36 bg-[#090909] text-white relative">
       <div className="max-w-4xl mx-auto px-6 sm:px-12">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+            {/* <Sparkles className="w-3.5 h-3.5" /> */}
             <span>Frequently Asked Questions</span>
           </div>
           <h2 className="font-serif text-4xl sm:text-6xl font-light tracking-tight leading-tight">
