@@ -48,11 +48,11 @@ export default function Navbar({ onBookClick }: NavbarProps) {
         {/* Brand Logo & Name */}
         <a href="#" className="flex items-center group">
           <Image
-            src="/logo/Astoria Logo.png"
+            src="/logo/logo-og.png"
             alt="Astoria"
-            width={160}
+            width={140}
             height={48}
-            className="h-10 w-auto object-contain"
+            className="h-7 w-auto object-contain"
             priority
           />
         </a>
