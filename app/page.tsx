@@ -72,7 +72,12 @@ export default function Home() {
       />
 
       {/* Glassmorphic Navbar */}
-      <Navbar onBookClick={handleBookVisit} />
+      {/* <Navbar onBookClick={handleBookVisit} /> */}
+
+      <Navbar
+        onBookClick={handleBookVisit}
+        isModalOpen={isBookingOpen}
+      />
 
       {/* HERO SCROLLY CANVAS EXPERIENCE (500vh container, pinned sticky canvas 100vh) */}
       <ScrollyCanvas

@@ -5,11 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Volume2, VolumeX, Menu, X, Calendar, Sparkles } from "lucide-react";
 import Image from "next/image";
 
+// interface NavbarProps {
+//   onBookClick?: () => void;
+// }
+
 interface NavbarProps {
   onBookClick?: () => void;
+  isModalOpen?: boolean;
 }
 
-export default function Navbar({ onBookClick }: NavbarProps) {
+export default function Navbar({ onBookClick, isModalOpen }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -38,7 +43,12 @@ export default function Navbar({ onBookClick }: NavbarProps) {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 transition-all duration-500">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 transition-all duration-300 ${isModalOpen
+          ? "opacity-0 pointer-events-none"
+          : "opacity-100"
+        }`}
+    >
       <div
         className={`max-w-7xl mx-auto rounded-full transition-all duration-500 flex items-center justify-between px-6 py-3.5 ${isScrolled
           ? "glass-panel-gold bg-black/85 shadow-[0_10px_30px_rgba(0,0,0,0.8)] border-accent/30"
@@ -121,13 +131,13 @@ export default function Navbar({ onBookClick }: NavbarProps) {
             </nav>
 
             <div className="flex items-center justify-between pt-2">
-              <button
+              {/* <button
                 onClick={() => setIsMuted(!isMuted)}
                 className="flex items-center gap-2 text-xs text-muted hover:text-accent"
               >
                 {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-accent" />}
                 <span>Ambient Sound</span>
-              </button>
+              </button> */}
 
               <button
                 onClick={() => {
