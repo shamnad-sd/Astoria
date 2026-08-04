@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Sparkles, Mail, Phone, MapPin, ArrowUp, Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -10,28 +11,27 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#090909] text-white pt-20 pb-12 relative overflow-hidden border-t border-accent/20">
-      
+
       {/* Top Gold Ambient Accent Line */}
       <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-60 absolute top-0 left-0" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
-          
+
           {/* Brand Col */}
           <div className="lg:col-span-5 space-y-6">
-            <a href="#" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full border border-accent/40 bg-surface flex items-center justify-center text-accent">
-                <Sparkles className="w-5 h-5" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl tracking-wider text-white font-medium">
-                  ASTORIA
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.3em] text-accent font-mono -mt-1">
-                  Convention Centre
-                </span>
-              </div>
+
+            <a href="#" className="flex items-center group">
+              <Image
+                src="/logo/logo-og.png"
+                alt="Astoria"
+                width={140}
+                height={48}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </a>
+
 
             <p className="text-muted text-xs sm:text-sm font-light leading-relaxed max-w-sm">
               Kannur's premier luxury destination for grand weddings, international conventions, corporate summits, and cultural celebrations.
