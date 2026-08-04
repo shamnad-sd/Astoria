@@ -38,30 +38,30 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
     <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-6 sm:p-12 md:p-16">
 
       {/* Dynamic Background Audio / Scroll Indicator Top Bar */}
-      <div className="flex justify-between items-center w-full max-w-7xl mx-auto pt-16 sm:pt-20">
+      {/* <div className="flex justify-between items-center w-full max-w-7xl mx-auto pt-16 sm:pt-20">
         <motion.div
           style={{ opacity: s1Opacity }}
           className="flex items-center gap-3 text-xs tracking-[0.25em] text-accent uppercase font-mono bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-accent/20"
         >
           <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-          {/* <span>Cinematic Sunrise &bull; Kannur</span> */}
+          <span>Cinematic Sunrise &bull; Kannur</span>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* SECTION 1: Grand Celebrations */}
       <motion.div
         style={{ opacity: s1Opacity, y: s1Y, scale: s1Scale, filter: s1Filter }}
         className="my-auto max-w-4xl mx-auto text-center pointer-events-auto flex flex-col items-center"
       >
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase mb-6 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
         >
           <Sparkles className="w-3.5 h-3.5 text-accent" />
-          {/* <span>Kannur's Premier Landmark Destination</span> */}
-        </motion.div>
+          <span>Kannur's Premier Landmark Destination</span>
+        </motion.div> */}
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -107,7 +107,7 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
       </motion.div>
 
       {/* SECTION 2: Where Architecture Meets Celebration */}
-      <motion.div
+      {/* <motion.div
         style={{ opacity: s2Opacity, y: s2Y, filter: s2Filter }}
         className="my-auto max-w-4xl mx-auto text-center pointer-events-auto px-4"
       >
@@ -121,10 +121,10 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
         <p className="text-sm sm:text-lg md:text-xl text-muted font-light max-w-2xl mx-auto leading-relaxed text-balance">
           Designed to impress from the first arrival, Astoria brings together striking architecture, elegant spaces and thoughtful hospitality to create unforgettable experiences.
         </p>
-      </motion.div>
+      </motion.div> */}
 
       {/* SECTION 3: Every Celebration Begins Here */}
-      <motion.div
+      {/* <motion.div
         style={{ opacity: s3Opacity, y: s3Y, scale: s3Scale }}
         className="my-auto max-w-5xl mx-auto text-center pointer-events-auto px-4"
       >
@@ -155,10 +155,10 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
             </div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* SECTION 4: Experience Astoria */}
-      <motion.div
+      {/* <motion.div
         style={{ opacity: s4Opacity, y: s4Y }}
         className="my-auto max-w-4xl mx-auto text-center pointer-events-auto px-4"
       >
@@ -175,7 +175,7 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
           <span className="text-accent">&bull;</span>
           <span className="text-white">Designed for Unforgettable Celebrations</span>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Bottom Scroll Indicator Pill */}
       <motion.div
