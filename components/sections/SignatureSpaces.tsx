@@ -51,18 +51,23 @@ export default function SignatureSpaces() {
       area: "18,000 Sq. Ft.",
       features: ["Dual Buffet Service Lanes", "Commercial Master Kitchen Access", "Ambient Chandeliers & Mood Lighting", "Dedicated Beverage Bars"],
       tag: "Culinary",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/signature spaces4.jpg",
     },
     {
-      id: "open-roof-venue",
-      name: "Open Roof Venue",
-      subtitle: "An open-air setting for intimate celebrations.",
-      description: "Breathtaking sky-lit terrace surrounded by lush greenery, perfect for golden hour cocktail receptions, sangeet nights, and stargazing celebrations.",
-      capacity: "800 Guests",
-      area: "10,000 Sq. Ft.",
-      features: ["Panoramic Skyline Views", "Custom Pergola & Fairylight Setup", "Dedicated Outdoor Bar", "Natural Breeze Architecture"],
-      tag: "Alfresco",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200",
+      id: "grand-reception-lobby",
+      name: "Grand Reception Lobby",
+      subtitle: "A refined welcome to every celebration.",
+      description: "An elegant double-height lobby featuring natural stone, warm wood finishes, and a luxurious reception experience for every guest.",
+      capacity: "500+ Guests",
+      area: "Double-Height Lobby",
+      features: [
+        "Luxury Reception Desk",
+        "Natural Stone Interiors",
+        "Premium Ambient Lighting",
+        "Spacious Guest Lounge"
+      ],
+      tag: "Arrival Experience",
+      image: "/images/signature spaces6.jpg",
     },
     {
       id: "amphitheatre",
@@ -73,7 +78,7 @@ export default function SignatureSpaces() {
       area: "12,000 Sq. Ft.",
       features: ["Acoustic Terraced Seating", "Central Raised Performance Deck", "Landscape Mood Lighting", "Integrated Backstage Passages"],
       tag: "Cultural",
-      image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/signature spaces5.jpg",
     },
     {
       id: "childrens-park",
@@ -84,7 +89,7 @@ export default function SignatureSpaces() {
       area: "4,000 Sq. Ft.",
       features: ["Soft Safety Turf Ground", "Modern Play Sculptures", "Surrounding Parent Seating", "Continuous Staff Supervision"],
       tag: "Family",
-      image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/signature spaces3.jpg",
     },
   ];
 

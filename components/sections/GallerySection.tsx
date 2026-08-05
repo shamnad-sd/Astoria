@@ -7,7 +7,8 @@ import { Sparkles, Maximize2, X } from "lucide-react";
 interface GalleryItem {
   id: number;
   title: string;
-  category: "Architecture" | "Grand Auditorium" | "Night View" | "Events";
+  // category: "Architecture" | "Grand Auditorium" | "Night View" | "Events";
+  category: "Architecture" | "Grand Auditorium";
   image: string;
   span: string;
 }
@@ -19,46 +20,46 @@ export default function GallerySection() {
   const galleryItems: GalleryItem[] = [
     {
       id: 1,
-      title: "Exterior Night Lighting",
-      category: "Night View",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200",
+      title: "Grand Auditorium Stage",
+      category: "Grand Auditorium",
+      image: "/images/signature spaces7.jpg",
       span: "col-span-1 md:col-span-2 row-span-2",
     },
     {
       id: 2,
-      title: "Grand Auditorium Stage",
-      category: "Grand Auditorium",
-      image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      title: "Contemporary Design",
+      category: "Architecture",
+      image: "/images/signature spaces2.jpg",
       span: "col-span-1 row-span-1",
     },
     {
       id: 3,
-      title: "Royal Mandap Setup",
-      category: "Events",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200",
+      title: "Grand Arrival",
+      category: "Grand Auditorium",
+      image: "/images/signature spaces8.jpg",
       span: "col-span-1 row-span-1",
     },
     {
       id: 4,
-      title: "Landmark Entry Facade",
+      title: "Children's Play Zone",
       category: "Architecture",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/signature spaces3.jpg",
       span: "col-span-1 row-span-1",
     },
     {
       id: 5,
-      title: "Open Roof Terrace at Dusk",
-      category: "Night View",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200",
+      title: "Grand Dining Hall",
+      category: "Grand Auditorium",
+      image: "/images/signature spaces4.jpg",
       span: "col-span-1 md:col-span-2 row-span-1",
     },
-    {
-      id: 6,
-      title: "Banquet Dining Setup",
-      category: "Events",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200",
-      span: "col-span-1 row-span-1",
-    },
+    // {
+    //   id: 6,
+    //   title: "Banquet Dining Setup",
+    //   category: "Architecture",
+    //   image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200",
+    //   span: "col-span-1 row-span-1",
+    // },
   ];
 
   const filteredItems =
@@ -84,7 +85,7 @@ export default function GallerySection() {
 
           {/* Filter Pills */}
           <div className="flex flex-wrap gap-2">
-            {["All", "Architecture", "Grand Auditorium", "Night View", "Events"].map((cat) => (
+            {["All", "Architecture", "Grand Auditorium"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
