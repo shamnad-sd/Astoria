@@ -29,7 +29,7 @@ export default function SignatureSpaces() {
       area: "25,000 Sq. Ft.",
       features: ["Pillar-less High Ceiling Architecture", "Advanced Acoustic Engineering", "Dedicated Bridal Suite Access", "VIP Lounge & Green Rooms"],
       tag: "Grand Scale",
-      image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/signature spaces1.jpg",
     },
     {
       id: "mini-auditorium",
@@ -40,7 +40,7 @@ export default function SignatureSpaces() {
       area: "6,500 Sq. Ft.",
       features: ["Integrated 4K Projection System", "High-Definition Surround Audio", "Customizable Stage Rigging", "Climate Controlled Comfort"],
       tag: "Executive",
-      image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/signature spaces2.jpg",
     },
     {
       id: "dining-hall",
@@ -125,7 +125,7 @@ export default function SignatureSpaces() {
                 <img
                   src={space.image}
                   alt={space.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-100"
+                  className="w-full h-full object-fill group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
                 <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-accent/30 text-accent text-[10px] font-mono tracking-widest uppercase">
@@ -195,7 +195,7 @@ export default function SignatureSpaces() {
                 <img
                   src={selectedSpace.image}
                   alt={selectedSpace.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 font-serif text-3xl text-white">

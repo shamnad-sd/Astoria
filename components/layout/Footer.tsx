@@ -83,11 +83,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent flex-shrink-0" />
-                <span>+91 98470 00000 / +91 98470 11111</span>
+                <span>+91 9447 033 669 / +91 9495 33 55 69</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
-                <span>info@astoriaconventioncentre.com</span>
+                <span>astoriakannur@gmail.com</span>
               </li>
             </ul>
           </div>
