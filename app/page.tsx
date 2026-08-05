@@ -18,6 +18,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import CtaBookingModal from "@/components/sections/CtaBookingModal";
 import Footer from "@/components/layout/Footer";
 import MarqueeRibbon from "@/components/sections/MarqueeRibbon";
+import AmbientBackground from "@/components/background/AmbientBackground";
 
 export default function Home() {
   const [preloadProgress, setPreloadProgress] = useState(0);
@@ -91,8 +92,12 @@ export default function Home() {
         />
       </ScrollyCanvas>
 
+
       {/* EDITORIAL WEBSITE SECTIONS */}
       <div className="relative z-20 bg-[#090909] shadow-[0_-50px_100px_rgba(9,9,9,1)]">
+        {/* Ambient motion behind every editorial section */}
+        <AmbientBackground />
+
         <ExperienceAstoria />
         <MarqueeRibbon />
         <SignatureSpaces />

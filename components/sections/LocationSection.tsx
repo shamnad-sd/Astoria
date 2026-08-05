@@ -29,7 +29,7 @@ export default function LocationSection() {
   ];
 
   return (
-    <section id="location" className="py-28 sm:py-36 bg-[#090909] text-white relative">
+    <section id="location" className="py-28 sm:py-36 bg-transparent z-10 text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

@@ -34,7 +34,7 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
   return (
     <>
       {/* SECTION CTA BANNER */}
-      <section className="py-28 sm:py-36 bg-[#090909] text-white relative overflow-hidden">
+      <section className="py-28 sm:py-36 bg-transparent z-10 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.08)_0%,_transparent_70%)] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-6 sm:px-12 relative z-10 text-center">

@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#090909] text-white pt-20 pb-12 relative overflow-hidden border-t border-accent/20">
+    <footer className="bg-transparent z-10 text-white pt-20 pb-12 relative overflow-hidden border-t border-accent/20">
 
       {/* Top Gold Ambient Accent Line */}
       <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-60 absolute top-0 left-0" />

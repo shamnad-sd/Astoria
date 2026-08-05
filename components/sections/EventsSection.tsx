@@ -47,7 +47,7 @@ export default function EventsSection({ onBookClick }: EventsSectionProps) {
   ];
 
   return (
-    <section id="events" className="py-28 sm:py-36 bg-[#090909] text-white relative">
+    <section id="events" className="py-28 sm:py-36 bg-transparent z-10 text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
 
         {/* Header */}
@@ -72,8 +72,8 @@ export default function EventsSection({ onBookClick }: EventsSectionProps) {
               key={idx}
               onClick={() => setActiveTab(idx)}
               className={`px-6 py-3 rounded-full text-xs font-mono tracking-widest uppercase transition-all duration-300 ${activeTab === idx
-                  ? "bg-gold-gradient text-black font-semibold shadow-[0_0_20px_rgba(212,175,55,0.3)]"
-                  : "glass-panel text-muted hover:text-white border border-white/10"
+                ? "bg-gold-gradient text-black font-semibold shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+                : "glass-panel text-muted hover:text-white border border-white/10"
                 }`}
             >
               {event.title}

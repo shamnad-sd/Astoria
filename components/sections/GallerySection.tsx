@@ -67,7 +67,7 @@ export default function GallerySection() {
       : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
-    <section id="gallery" className="py-28 sm:py-36 bg-[#090909] text-white relative">
+    <section id="gallery" className="py-28 sm:py-36 bg-transparent z-10 text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
 
         {/* Header */}
@@ -89,8 +89,8 @@ export default function GallerySection() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all duration-300 ${activeCategory === cat
-                    ? "bg-gold-gradient text-black font-semibold"
-                    : "glass-panel text-muted hover:text-white border border-white/10"
+                  ? "bg-gold-gradient text-black font-semibold"
+                  : "glass-panel text-muted hover:text-white border border-white/10"
                   }`}
               >
                 {cat}
