@@ -67,7 +67,7 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.4 }}
-          className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light text-white tracking-tight leading-[1.05] mb-6"
+          className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light text-white tracking-tight leading-[1.05] mb-6"
         >
           Designed for <br />
           <span className="italic font-normal text-gold-gradient">Grand Celebrations</span>

@@ -37,8 +37,11 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Playfair Display", "Cinzel", "serif"],
-        sans: ["var(--font-sans)", "Inter", "Plus Jakarta Sans", "sans-serif"],
+        heading: ["var(--font-heading)", "Cormorant Garamond", "serif"],
+        serif: ["var(--font-serif)", "Cormorant Garamond", "serif"],
+        sans: ["var(--font-sans)", "Roboto", "system-ui", "sans-serif"],
+        bohemy: ["var(--font-bohemy)", "Cormorant Garamond", "serif"],
+        "bohemy-script": ["var(--font-bohemy-script)", "Cormorant Garamond", "cursive"],
       },
       backgroundImage: {
         "gold-gradient": "linear-gradient(135deg, #E6DDD4 0%, #B7A99A 50%, #8E7E6E 100%)",
