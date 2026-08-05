@@ -90,19 +90,19 @@ export default function HeroOverlays({ onBookClick, onExploreClick }: HeroOverla
         >
           <button
             onClick={onBookClick}
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gold-gradient text-black font-semibold text-xs tracking-[0.2em] uppercase hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group"
+            className=" sm:w-auto px-8 py-4 rounded-full bg-gold-gradient text-black font-semibold text-xs tracking-[0.2em] uppercase hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group"
           >
             <Calendar className="w-4 h-4" />
-            <span>Book Tour</span>
+            <span>Book Your Event</span>
           </button>
 
-          <button
+          {/* <button
             onClick={onExploreClick}
             className="w-full sm:w-auto px-8 py-4 rounded-full bg-surface-glass text-white border border-white/20 hover:border-accent text-xs tracking-[0.2em] uppercase hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 group"
           >
             <span>Explore Astoria</span>
             <ArrowUpRight className="w-4 h-4 text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </button>
+          </button> */}
         </motion.div>
       </motion.div>
 

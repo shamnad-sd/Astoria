@@ -37,9 +37,9 @@ export default function Navbar({ onBookClick, isModalOpen }: NavbarProps) {
     { label: "Signature Spaces", href: "#spaces" },
     { label: "Events", href: "#events" },
     { label: "Why Astoria", href: "#why-astoria" },
-    { label: "Gallery", href: "#gallery" },
+    // { label: "Gallery", href: "#gallery" },
     { label: "Location", href: "#location" },
-    { label: "FAQ", href: "#faq" },
+    // { label: "FAQ", href: "#faq" },
   ];
 
   return (
