@@ -59,16 +59,16 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
                 className="px-8 py-4 rounded-full bg-gold-gradient text-black font-semibold text-xs tracking-[0.2em] uppercase hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Book Tour</span>
+                <span>Contact Us</span>
               </button>
 
-              <button
+              {/* <button
                 onClick={onOpen}
                 className="px-8 py-4 rounded-full glass-panel text-white font-semibold text-xs tracking-[0.2em] uppercase border border-white/20 hover:border-accent hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Mail className="w-4 h-4 text-accent" />
                 <span>Contact Us</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
