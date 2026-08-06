@@ -39,7 +39,7 @@ export default function WhyAstoria() {
   ];
 
   return (
-    <section id="why-astoria" className="py-28 sm:py-36 bg-transparent z-10 text-white relative">
+    <section id="why-astoria" className="py-28 sm:py-36 bg-transparent text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
 
         {/* Header */}

@@ -19,6 +19,7 @@ import CtaBookingModal from "@/components/sections/CtaBookingModal";
 import Footer from "@/components/layout/Footer";
 import MarqueeRibbon from "@/components/sections/MarqueeRibbon";
 import AmbientBackground from "@/components/background/AmbientBackground";
+import ThemeTestToggle from "@/components/dev/ThemeTestToggle";
 
 export default function Home() {
   const [preloadProgress, setPreloadProgress] = useState(0);
@@ -67,6 +68,8 @@ export default function Home() {
 
   return (
     <main className="relative bg-[#090909] text-white min-h-screen">
+      {/* TEMPORARY — light/dark toggle for the client review */}
+      {/* <ThemeTestToggle /> */}
       {/* Luxury Preloader Screen */}
       <LuxuryPreloader
         progress={preloadProgress}

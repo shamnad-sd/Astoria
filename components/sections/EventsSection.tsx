@@ -17,7 +17,7 @@ export default function EventsSection({ onBookClick }: EventsSectionProps) {
       subtitle: "Royal Celebrations & Extravagances",
       description: "From lavish sangeet galas to grand wedding receptions, Astoria provides a regal canvas with pillar-less architecture, opulent chandeliers, and dedicated bridal suites.",
       tag: "Weddings",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200",
+      image: "https://images.unsplash.com/photo-1542042161784-26ab9e041e89?auto=format&fit=crop&q=80&w=1200",
       highlights: ["3,000+ Banquet Capacity", "Private Royal Bridal Suite", "Master Culinary Banqueting", "Custom Floral & Stage Decor"],
     },
     {
@@ -25,7 +25,7 @@ export default function EventsSection({ onBookClick }: EventsSectionProps) {
       subtitle: "Conventions, Summits & Launches",
       description: "Host high-profile corporate summits, product launches, and annual shareholder meetings with state-of-the-art AV projection, high-speed fiber internet, and executive dining.",
       tag: "Corporate",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/signature spaces5.jpg",
       highlights: ["Integrated 4K Projection", "Breakout Seminar Rooms", "Executive Catering Services", "Seamless Press & Media Setup"],
     },
     {
@@ -47,7 +47,7 @@ export default function EventsSection({ onBookClick }: EventsSectionProps) {
   ];
 
   return (
-    <section id="events" className="py-28 sm:py-36 bg-transparent z-10 text-white relative">
+    <section id="events" className="py-28 sm:py-36 bg-transparent text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
 
         {/* Header */}

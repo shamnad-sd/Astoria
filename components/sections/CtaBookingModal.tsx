@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Calendar, Phone, Mail, User, CheckCircle, X, Send } from "lucide-react";
+import { Sparkles, Calendar, Phone, Mail, User, CheckCircle, X, Send, Loader2, AlertCircle } from "lucide-react";
 
 interface CtaBookingModalProps {
   isOpen: boolean;
@@ -10,34 +10,70 @@ interface CtaBookingModalProps {
   onOpen: () => void;
 }
 
+const EMPTY_FORM = {
+  name: "",
+  phone: "",
+  email: "",
+  eventType: "Luxury Wedding",
+  eventDate: "",
+  guestCount: "1000",
+  message: "",
+  company: "", // honeypot — hidden from real users
+};
+
 export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingModalProps) {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    eventType: "Luxury Wedding",
-    eventDate: "",
-    guestCount: "1000",
-    message: "",
-  });
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [formData, setFormData] = useState(EMPTY_FORM);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Don't carry a stale error message into the next time the modal opens.
+  useEffect(() => {
+    if (!isOpen) setError(null);
+  }, [isOpen]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-    }, 3000);
+    if (sending) return;
+
+    setSending(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData(EMPTY_FORM);
+        onClose();
+      }, 4000);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
     <>
       {/* SECTION CTA BANNER */}
-      <section className="py-28 sm:py-36 bg-transparent z-10 text-white relative overflow-hidden">
+      <section className="py-28 sm:py-36 bg-transparent text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.08)_0%,_transparent_70%)] pointer-events-none" />
 
-        <div className="max-w-5xl mx-auto px-6 sm:px-12 relative z-10 text-center">
+        <div className="max-w-5xl mx-auto px-6 sm:px-12 relative text-center">
           <div className="glass-panel-gold rounded-3xl p-10 sm:p-16 border border-accent/40 shadow-2xl relative">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface text-accent text-xs font-mono tracking-[0.3em] uppercase mb-6">
               {/* <Sparkles className="w-3.5 h-3.5" /> */}
@@ -54,21 +90,21 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <button
+              {/* <button
                 onClick={onOpen}
                 className="px-8 py-4 rounded-full bg-gold-gradient text-black font-semibold text-xs tracking-[0.2em] uppercase hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Contact Us</span>
-              </button>
+                <span>Book Tour</span>
+              </button> */}
 
-              {/* <button
+              <button
                 onClick={onOpen}
                 className="px-8 py-4 rounded-full glass-panel text-white font-semibold text-xs tracking-[0.2em] uppercase border border-white/20 hover:border-accent hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Mail className="w-4 h-4 text-accent" />
                 <span>Contact Us</span>
-              </button> */}
+              </button>
             </div>
           </div>
         </div>
@@ -235,12 +271,47 @@ export default function CtaBookingModal({ isOpen, onClose, onOpen }: CtaBookingM
                       />
                     </div>
 
+                    {/* Honeypot: off-screen and hidden from assistive tech, so
+                        only bots ever fill it in. */}
+                    <div className="absolute left-[-9999px] top-0" aria-hidden="true">
+                      <label htmlFor="company">Company</label>
+                      <input
+                        id="company"
+                        type="text"
+                        name="company"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      />
+                    </div>
+
+                    {error && (
+                      <p
+                        role="alert"
+                        className="flex items-center gap-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-xs text-red-300"
+                      >
+                        <AlertCircle className="w-4 h-4 shrink-0" />
+                        <span>{error}</span>
+                      </p>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-full bg-gold-gradient text-black font-semibold text-xs tracking-[0.2em] uppercase hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all flex items-center justify-center gap-2 mt-4"
+                      disabled={sending}
+                      className="w-full py-4 rounded-full bg-gold-gradient text-black font-semibold text-xs tracking-[0.2em] uppercase hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all flex items-center justify-center gap-2 mt-4 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:shadow-none"
                     >
-                      <Send className="w-4 h-4" />
-                      <span>Submit Booking Request</span>
+                      {sending ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Sending…</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          <span>Submit Booking Request</span>
+                        </>
+                      )}
                     </button>
                   </form>
                 </div>

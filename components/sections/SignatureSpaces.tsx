@@ -83,7 +83,7 @@ export default function SignatureSpaces() {
     {
       id: "childrens-park",
       name: "Children's Park",
-      subtitle: "A dedicated space for young guests.",
+      subtitle: "A joyful outdoor space crafted for safe play and family fun.",
       description: "Safe, beautifully manicured outdoor play domain featuring supervised play zones so families can celebrate with complete peace of mind.",
       capacity: "Family Zone",
       area: "4,000 Sq. Ft.",
@@ -94,7 +94,7 @@ export default function SignatureSpaces() {
   ];
 
   return (
-    <section id="spaces" className="py-28 sm:py-36 bg-transparent z-10 text-white relative">
+    <section id="spaces" className="py-28 sm:py-36 bg-transparent text-white relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
 
         {/* Section Header */}
@@ -102,7 +102,7 @@ export default function SignatureSpaces() {
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-surface-glass text-accent text-xs font-mono tracking-[0.3em] uppercase mb-4">
               {/* <Sparkles className="w-3.5 h-3.5" /> */}
-              <span>World-Class Venues</span>
+              <span>World Class Venues</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight">
               Signature <span className="italic font-normal text-gold-gradient">Spaces</span>

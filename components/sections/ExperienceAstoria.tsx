@@ -6,7 +6,7 @@ import { Sparkles, Compass, ShieldCheck, Award } from "lucide-react";
 
 export default function ExperienceAstoria() {
   return (
-    <section id="experience" className="relative py-28 sm:py-36 bg-transparent z-10 text-white overflow-hidden">
+    <section id="experience" className="relative py-28 sm:py-36 bg-transparent text-white overflow-hidden">
       {/* Subtle gold ambient glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
