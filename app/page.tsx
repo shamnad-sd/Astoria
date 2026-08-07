@@ -20,6 +20,7 @@ import Footer from "@/components/layout/Footer";
 import MarqueeRibbon from "@/components/sections/MarqueeRibbon";
 import AmbientBackground from "@/components/background/AmbientBackground";
 import ThemeTestToggle from "@/components/dev/ThemeTestToggle";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 
 export default function Home() {
   const [preloadProgress, setPreloadProgress] = useState(0);
@@ -116,6 +117,9 @@ export default function Home() {
         />
         <Footer />
       </div>
+
+      {/* Floating WhatsApp contact */}
+      <WhatsAppButton />
     </main>
   );
 }
